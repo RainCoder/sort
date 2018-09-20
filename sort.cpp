@@ -19,11 +19,17 @@ int SortAnalysis(auto& A )
       int v = A[i];
       int j = i - 1;
 
-      while (j >= 0 and A[j] > v )
+      while (j >= 0)
         {
-          count = count + 1;
-          A[j + 1] = A[j];
-          j = j -1;
+					  count = count + 1;
+			if(A[j] > v )
+			{
+		
+				  A[j + 1] = A[j];
+				  j = j -1;
+			  }
+			  else
+			  break;
         } 
      
      A[j + 1] = v;
